@@ -201,7 +201,7 @@ $statusInfo = fetchUserStatus($profileId);
                             </h1>
                         </span>
             <!-- PROFILE PICTURE BOX -->
-                        <div class="general-about">
+                       <div class="general-about">
                             <div class="profile-pic">
                                 <img class='pfp-fallback' style="width: 235px; height: auto; aspect-ratio: 1/1;" alt="user pfp" src='media/pfp/<?= htmlspecialchars($userInfo['pfp']); ?>'>
                             </div>
@@ -209,11 +209,11 @@ $statusInfo = fetchUserStatus($profileId);
                                 <?php if (!empty($statusInfo['status'])): ?>
                                         <p>"<?= $statusInfo['status'] ?>"
                                         </p>
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                     <?php if (!empty($statusInfo['you'])): ?>
                                         <p><?= $statusInfo['you'] ?>
                                         </p>
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                     <p class="online"><img src="static/img/green_person.png" aria-hidden="true" alt="Online icon" loading="lazy">
                                         ONLINE!</p>
                                 </div>
@@ -227,7 +227,7 @@ $statusInfo = fetchUserStatus($profileId);
                         <div class="mood">
                             <p>
                                 <b>Mood: </b>
-                                <?= htmlspecialchars($statusInfo['mood']); ?>
+                                <?= htmlspecialchars($statusInfo['mood'] ?? ''); ?>
                             </p>
                             <p>
                                 <b>View my:
@@ -356,7 +356,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['General']); ?>
+                                                    <?= htmlspecialchars($interests['General'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
@@ -366,7 +366,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['Music']); ?>
+                                                    <?= htmlspecialchars($interests['Music'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
@@ -376,7 +376,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['Movies']); ?>
+                                                    <?= htmlspecialchars($interests['Movies'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
@@ -386,7 +386,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['Television']); ?>
+                                                    <?= htmlspecialchars($interests['Television'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
@@ -396,7 +396,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['Books']); ?>
+                                                    <?= htmlspecialchars($interests['Books'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
@@ -408,7 +408,7 @@ $statusInfo = fetchUserStatus($profileId);
                                             </td>
                                             <td>
                                                 <p>
-                                                    <?= htmlspecialchars($interests['Heroes']); ?>
+                                                    <?= htmlspecialchars($interests['Heroes'] ?? ''); ?>
                                                 </p>
                                             </td>
                                         </tr>
